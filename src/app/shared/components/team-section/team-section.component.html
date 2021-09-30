@@ -1,0 +1,42 @@
+<section id="team" class="team">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Team</h2>
+        <p>Our Great Team</p>
+      </div>
+
+      <div class="row" data-aos="fade-left">
+
+        <div *ngFor="let card of cardBuild; let i=index" class="col-lg-3 col-md-6" id="mainCard">
+          
+            <div *ngIf="!isFlipped"  class="member" data-aos="zoom-in" data-aos-delay="100" >
+              <div class="pic"><img src="../../../../assets/images/{{card.getImage()}}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>{{card.getName()}}</h4>
+                <span>{{card.getRole()}}</span>
+                <div class="social">
+                  <a href="{{card.getSocialOne()}}"><i class="icofont-twitter"></i></a>
+                  <a href="{{card.getSocialTwo()}}"><i class="icofont-facebook"></i></a>
+                  <a href="{{card.getSocialThree()}}"><i class="icofont-instagram"></i></a>
+                  <a href="{{card.getSocialFour()}}"><i class="icofont-linkedin"></i></a>
+                </div>
+                  <div class="text-center text-lg-center switch">
+                    <button (click)= "flipCard(i)" class="btn-get-started">Learn more</button>
+                  </div>
+              </div>
+            </div>
+            <div *ngIf="isFlipped"  class="content" data-aos="zoom-in" data-aos-delay="50">
+              <p>This is jeff king. He is the founder and director of this great institute and he has shown great leadership attributes towards this citadel of learning.</p>
+              <p>This is jeff king. He is the founder and director of this great institute and he has shown great leadership attributes towards this citadel of learning</p>
+              <p>This is jeff king. He is the founder and director of this great institute and he has shown great leadership attributes towards this citadel of learning</p>
+              <p>This is jeff king. He is the founder and director of this great institute and he has shown great leadership attributes towards this citadel of learning</p>
+              <p>This is jeff king. He is the founder and director of this great institute and he has shown great leadership attributes towards this citadel of learning</p>
+              <div class="text-center text-lg-center switch" style="position: sticky; left: 0; right: 0; bottom: 0;">
+                <button (click)="flipCard()" class="btn-get-started">Go back</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>

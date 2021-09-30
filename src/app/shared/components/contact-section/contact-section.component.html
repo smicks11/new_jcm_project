@@ -1,0 +1,118 @@
+<section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>We would love to hear from you</h2>
+        <p>Contact Us</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+          <div class="info">
+            <div class="address">
+              <i class="icofont-google-map"></i>
+              <!-- <h4>Location:</h4> -->
+              <p>No. 5 ladipo Tejumola Street, New Bodija, Ibadan, Oyo State, Nigeria. </p>
+            </div>
+
+            <div class="email">
+              <i class="icofont-envelope"></i>
+              <!-- <h4>Email:</h4> -->
+              <p> jcmoutreach2017@gmail.com</p>
+              <p></p>
+            </div>
+
+            <div class="phone">
+              <i class="icofont-phone"></i>
+              <!-- <h4>Call:</h4> -->
+              <p>+234 8033 843762</p>
+              <p>+234 8074286452</p>
+              <p>+234 8034298538</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-8 mt-5 mt-lg-0 kwes-form" data-aos="fade-left" data-aos-delay="200">
+
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" novalidate>
+            <!-- <div class="row mb-2 text-center"  *ngIf="showMsg">
+              <div class="col-xs-12">
+                <p class="alert alert-success">
+                    <strong>Thanks for reaching out! We would get back to you shortly.</strong>
+                </p>
+              </div>
+            </div> -->
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <input class="form-control"
+                       id="nameId"
+                       type="text"
+                       placeholder="Name"
+                       required
+                       formControlName="name"
+                />
+                <div *ngIf="myForm.get('name').invalid && (myForm.get('name').dirty || myForm.get('name').touched)">
+                  <p style="font-size: 12px; color: red;">Please provide a name.</p>
+                </div>
+              
+               
+              </div>
+
+              <div class="col-md-6 form-group">
+                <input class="form-control"
+                       id="emailId"
+                       type="text"
+                       placeholder="Email"
+                       required
+                       formControlName="email"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                />
+                <div *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)">
+                  <p style="font-size: 12px; color: red;">Please provide a valid email address.</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input class="form-control"
+              id="subjectId"
+              type="text"
+              placeholder="Subject"
+              required
+              formControlName="subject"
+             />
+             <div *ngIf="myForm.get('subject').invalid && (myForm.get('subject').dirty || myForm.get('subject').touched)">
+              <p style="font-size: 12px; color: red;">Please provide a subject.</p>
+            </div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control"
+              id="messageId"
+              rows="5"
+              type="text"
+              placeholder="Message"
+              required
+              formControlName="message"
+              ></textarea>
+
+              <div *ngIf="myForm.get('message').invalid && (myForm.get('message').dirty || myForm.get('message').touched)">
+                <p style="font-size: 12px; color: red;">Messages must be at least 15 characters long.</p> 
+              </div>
+            </div>
+            <div class="card mt-3">
+              <div class="card-body">
+                  <div #recaptcha ></div>
+              </div>
+          </div>
+            <div class="text-center mt-2"><input type = "submit" [disabled]="myForm.invalid" value = "Send Message"></div>
+          </form>
+          
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>

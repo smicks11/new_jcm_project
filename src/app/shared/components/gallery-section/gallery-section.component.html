@@ -1,0 +1,23 @@
+<section id="gallery" class="gallery">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Gallery</h2>
+        <p>Check our Gallery</p>
+      </div>
+
+      <div class="row no-gutters" data-aos="fade-left">
+        <div *ngFor="let img of imageBuild; let i=index" class="col-lg-3 col-md-4">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+            <a href="../../../../assets/images/{{img.getImage()}}" class="venobox" data-gall="gallery-item">
+                <img *ngIf="i<4" src="../../../../assets/images/{{img.getImage()}}" alt="" class="img-fluid">
+                <div *ngIf="i==3" class="text-center transparent">
+                  <h2>See More Photos</h2>
+                </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>

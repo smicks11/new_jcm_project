@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="logo">
+    <h1 class="text-light">
+      <a class="" routerLink="/"><span style="font-size: 1.2rem">JCMOUTREACH</span></a>
+    </h1>
+  </div>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse"></div>
+  <div class="collapse navbar-collapse"></div>
+  <div class="collapse navbar-collapse"></div>
+  <div class="collapse navbar-collapse"></div>
+  <div
+    class="collapse navbar-collapse nav-menu show"
+    [ngClass]="{ show: navbarOpen }"
+  >
+    <ul class="navbar-nav">
+      <li class="active"><a routerLink="/">Home</a></li>
+      <li class="drop-down">
+        <a>About Us</a>
+        <ul>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/tenderlift">TenderLift Junior Grade</a></li>
+          <li><a routerLink="/volunteer">Volunteer Opportunities</a></li>
+          <li><a routerLink="/faq">Frequently asked Questions</a></li>
+          <li><a routerLink="/outreachprograms">Outreach programs</a></li>
+        </ul>
+      </li>
+      <li><a routerLink="/children">Children</a></li>
+      <li><a routerLink="/support">Support</a></li>
+      <li><a routerLink="/contact">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>

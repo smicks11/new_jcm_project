@@ -1,0 +1,75 @@
+section {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  
+  .section-bg {
+    background-color: #f5f5ff;
+  }
+  
+  .section-title {
+    padding-bottom: 40px;
+  }
+  
+  /* .section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #1acc8d;
+    margin: 4px 10px;
+  } */
+  
+  .section-title h2 {
+    margin: 0;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #010483;
+  }
+  p{
+    font-size: 19px;
+  }
+  .btn-get-started {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1acc8d;
+  }
+  .btn-get-started:hover {
+    background: #17b57d;
+  }
+  .inner-page ul{
+    list-style: none;
+    padding: 0;
+  }
+  .inner-page ul li {
+    /* padding: 0.075rem; */
+    padding-bottom: 10px;
+    
+  }
+  .inner-page ul i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: #1acc8d;
+  }
